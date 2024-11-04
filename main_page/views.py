@@ -1,3 +1,6 @@
+from django.contrib import admin
+from django.http import HttpResponse
+import datetime
 
 
 def about_me(request):
@@ -7,7 +10,8 @@ def about_me(request):
 
 def about_my_pets(request):
     if request.method == 'GET':
-        return HttpResponse("<img src='https://myfavoritepets.ru/wp-content/uploads/news373_1.jpg'>- This is my parrot, Grigoriy", )
+        return HttpResponse(
+            "<img src='https://myfavoritepets.ru/wp-content/uploads/news373_1.jpg'>- This is my parrot, Grigoriy", )
 
 
 def system_time(request):
