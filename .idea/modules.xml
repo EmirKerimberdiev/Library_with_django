@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GEEKS_LIBRARY.iml" filepath="$PROJECT_DIR$/.idea/GEEKS_LIBRARY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Library_with_django.iml" filepath="$PROJECT_DIR$/.idea/Library_with_django.iml" />
     </modules>
   </component>
 </project>
