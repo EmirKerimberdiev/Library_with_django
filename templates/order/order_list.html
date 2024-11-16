@@ -1,19 +1,41 @@
+<!--{% include '../header.html' %}-->
+
+<!--<ul>-->
+<!--  {% for i in order_list %}-->
+
+<!--  <li>-->
+<!--    <h1>{{ i.name }}</h1>-->
+<!--    <p>{{ i.phone_number }}</p>-->
+<!--    <p>{{ i.email }}</p>-->
+<!--    <p>{{ i.book }}</p>-->
+<!--  </li>-->
+<!--  <button><a href ='/order_list/{{ i.id }}/delete/'>Удалить</a></button>-->
+<!--  <button><a href ='/order_list/{{ i.id }}/update/'>Изменить</a></button>-->
+<!--  {% endfor %}-->
+
+<!--</ul>-->
+
+<!--{% include '../footer.html' %}-->
+
+{% load static %}
 {% include '../header.html' %}
-
-<ul>
-  {% for i in order_list %}
-
-  <li>
-    <h1>{{ i.name }}</h1>
-    <p>{{ i.phone_number }}</p>
-    <p>{{ i.email }}</p>
-    <p>{{ i.book }}</p>
-  </li>
-  <button><a href ='/order_list/{{ i.id }}/delete/'>Удалить</a></button>
-  <button><a href ='/order_list/{{ i.id }}/update/'>Изменить</a></button>
-  {% endfor %}
-
-</ul>
+<link rel="stylesheet" href="{% static 'css/order_list.css' %}">
+<div class="container">
+    <div class="order-list">
+        <h2>Заказы</h2>
+        <ul>
+            {% for i in order_list %}
+            <li>
+                <h1>{{ i.name }}</h1>
+                <p>{{ i.phone_number }}</p>
+                <p>{{ i.email }}</p>
+                <p>{{ i.book }}</p>
+                <button><a href ='/order_list/{{ i.id }}/delete/'>Удалить</a></button>
+                <button><a href ='/order_list/{{ i.id }}/update/'>Изменить</a></button>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 
 {% include '../footer.html' %}
-
