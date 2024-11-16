@@ -5,8 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef05a33f-fb6a-4241-800f-e63f3cbdd2ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/basket/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basket/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hashtags/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_page/migrations/0005_alter_books_pages_reviewbooks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_page/migrations/0006_alter_reviewbooks_created_at.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/books/sketch-vintage-books-seamless-pattern_53562-9593.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/show.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/show_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/all_hashtags.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/children.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/grand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/order/create_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/order/order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/order/update_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/young.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Library_with_django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Library_with_django.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_page/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_page/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_page/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +58,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -27,17 +69,27 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2oUm1IJADGHdCGA656NcGwc8Lot" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging main",
+    "last_opened_file_path": "C:/Users/User/PycharmProjects/Library_with_django/media/books"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\Library_with_django\media\books" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="GEEKS_LIBRARY" />
@@ -159,5 +211,9 @@
       <updated>1730932311178</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
