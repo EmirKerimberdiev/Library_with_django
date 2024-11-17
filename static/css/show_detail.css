@@ -3,14 +3,13 @@ body {
             flex-direction: column;
             min-height: 100vh;
             padding-top: 70px;
-            background: url("https://i.pinimg.com/736x/e3/7d/a9/e37da92d1e32051af32a81a8950733f3.jpg");
+            background: url("https://img.freepik.com/premium-vector/sketch-vintage-books-seamless-pattern_53562-9593.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
         }
 
         footer {
-            background-color: #171716;
             color: yellow;
             text-align: center;
             padding: 10px;

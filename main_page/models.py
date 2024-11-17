@@ -6,7 +6,9 @@ class Books(models.Model):
     GENRE_CHOICE = (
         ('Приключения', 'Приключения'),
         ('Книга рецептов', 'Книга рецептов'),
-        ('Фентези', 'Фентези')
+        ('Фентези', 'Фентези'),
+        ('Современная проза', 'Современная проза'),
+        ('Фантастика', 'Фантастика'),
     )
     image = models.ImageField(upload_to='books/', verbose_name='загрузите картинку')
     title = models.CharField(max_length=100, verbose_name='Напишите название книги')
