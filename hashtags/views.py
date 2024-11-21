@@ -15,11 +15,13 @@ def grand_list_view(request):
         context = {'grand': grand}
         return render(request, 'grand.html', context=context)
 
+
 def young_list_view(request):
     if request.method == 'GET':
         young = models.Hashtag.objects.filter(tags__name='Для молодых').order_by('-id')
         context = {'young': young}
         return render(request, 'young.html', context=context)
+
 
 def children_list_view(request):
     if request.method == 'GET':
