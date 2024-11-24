@@ -4,9 +4,6 @@ body {
     min-height: 100vh; /* Минимальная высота для всего экрана */
     padding-top: 700px; /* Отступ для контента, чтобы не перекрывало навигационной панелью */
     background: url("https://img.freepik.com/premium-vector/sketch-vintage-books-seamless-pattern_53562-9593.jpg");
-    background-repeat: no-repeat; /* Убирает повторение изображения */
-    background-size: cover; /* Покрывает весь экран */
-    background-position: center; /* Центрирует изображение */
 }
 
 .content {
