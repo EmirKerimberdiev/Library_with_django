@@ -31,7 +31,7 @@ def parsing():
     response = get_html(URL)
     if response.status_code == 200:
         book_list2 = []
-        for page in range(1, 10):
+        for page in range(1, 2):
             response = get_html(
                 "https://www.labirint.ru/books/", params={'page': page})
             book_list2.extend(get_data(response.text))
