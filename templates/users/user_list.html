@@ -6,14 +6,14 @@
 </head>
 <body>
 
-{% for i in object_list %}
-
+{% for i in person %}
 <h1>Никнейм - {{ i.username }}</h1>
 <p>Почта - {{ i.email }}</p>
 <p>Имя - {{ i.first_name }}</p>
 <p>Фамилия - {{ i.last_name }}</p>
 {% if i.level %}
 <p>Ваш уровень - {{ i.level }}</p>
+<p>Ваша зарплата - {{ i.salary }}</p>
 {%  endif %}
 <hr>
 <hr>

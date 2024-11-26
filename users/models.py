@@ -1,11 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-
 
 class CustomUser(User):
-    level = models.CharField(max_length=20, default='Junior')
+    LEVEL_CHOICES = (
+        ('Junior', 'Junior'),
+        ('Middle', 'Middle'),
+        ('Senior', 'Senior'),
+    )
+    level = models.CharField(choices=LEVEL_CHOICES, default='Junior', max_length=10)
     salary = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
@@ -16,6 +19,6 @@ class CustomUser(User):
         elif self.level == 'Senior':
             self.salary = 2000
         else:
-            self.salary = 'Неизвестный уровень'
+            self.salary = 0
 
         super().save(*args, **kwargs)

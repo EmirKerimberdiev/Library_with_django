@@ -1,13 +1,15 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from . import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 
+CHOICES = (
+    ('Junior', 'Junior'),
+    ('Middle', 'Middle'),
+    ('Senior', 'Senior'),
+)
 
 class CustomRegistrationForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    level = forms.CharField(max_length=100, required=True)
+    level = forms.ChoiceField(choices=CHOICES, required=True)
 
     class Meta:
         model = models.CustomUser
