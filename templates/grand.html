@@ -1,18 +1,27 @@
 {% include 'header.html' %}
 
-
-
-        {% for i in grand %}
-        <div class="card" style="width: 18rem; margin: 0 auto;">
-            <img src="https://rostislav.kiev.ua/wp-content/uploads/2014/04/kniga.jpg" class="card-img-top" alt="Изображение">
-            <div class="card-body">
-                <h5 class="card-title">{{ i.title }}</h5>
-                <p class="card-text">{{ i.prise }}</p>
-            </div>
+<div class="container my-5">
+        <div class="d-flex justify-content-around mb-4">
+            <a href="{%  url 'grand_tags' %}" class="btn btn-primary">Для стариков</a>
+            <a href="{%  url 'young_tags' %}" class="btn btn-secondary">Для молодых</a>
+            <a href="{%  url 'children_tags' %}" class="btn btn-secondary">Для детей</a>
         </div>
-        {% endfor %}
 
-    </div>
+        <div class="row">
+            {% for i in grand %}
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%;">
+                    <img src="https://rostislav.kiev.ua/wp-content/uploads/2014/04/kniga.jpg" class="card-img-top" alt="Изображение">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ i.title }}</h5>
+                        <p class="card-text">{{ i.prise }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+</div>
 
 
 {% include 'footer.html' %}

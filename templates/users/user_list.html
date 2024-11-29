@@ -1,28 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% include 'header.html' %}
 
-{% for i in person %}
-<h1>Никнейм - {{ i.username }}</h1>
-<p>Почта - {{ i.email }}</p>
-<p>Имя - {{ i.first_name }}</p>
-<p>Фамилия - {{ i.last_name }}</p>
-{% if i.level %}
-<p>Ваш уровень - {{ i.level }}</p>
-<p>Ваша зарплата - {{ i.salary }}</p>
-{%  endif %}
-<hr>
-<hr>
-{% endfor %}
+<body class="bg-light">
+    <div class="container py-5 card shadow-lg ", style="max-width: 500px;">
+        <!-- Заголовок -->
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-primary">Список пользователей</h1>
+            <p class="text-muted">Просмотрите информацию о каждом зарегистрированном пользователе.</p>
+        </div>
 
-<form action="{% url 'users:login' %}" method="POST">
-    {% csrf_token %}
-    <button type="submit">Выйти</button>
-</form>
+        <!-- Список пользователей -->
+        <div class="row g-4">
+            {% for i in person %}
+            {% load cache %}
+            {% cache 600 person %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Никнейм: {{ i.username }}</h5>
+                        <p class="card-text"><strong>Почта:</strong> {{ i.email }}</p>
+                        <p class="card-text"><strong>Имя:</strong> {{ i.first_name }}</p>
+                        <p class="card-text"><strong>Фамилия:</strong> {{ i.last_name }}</p>
 
+                        {% if i.level %}
+                        <p class="card-text text-success"><strong>Уровень:</strong> {{ i.level }}</p>
+                        <p class="card-text text-info"><strong>Зарплата:</strong> {{ i.salary }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endcache %}
+            {% endfor %}
+        </div>
+
+        <!-- Кнопка выхода -->
+        <div class="text-center mt-5">
+            <form action="{% url 'users:login' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-lg">Выйти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

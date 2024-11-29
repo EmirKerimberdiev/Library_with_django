@@ -4,8 +4,9 @@
 <!-- Контент с карточками -->
 <div class="container mt-4 content">
     <div class="row justify-content-center">
-
         {% for i in books_list %}
+        {% load cache %}
+        {% cache 600 books_list %}
         <!-- Пример карточки книги -->
         <div class="col-md-4 mb-4">
             <div class="card" style="width: 100%;">
@@ -17,6 +18,7 @@
                 </div>
             </div>
         </div>
+        {% endcache %}
         {% endfor %}
         <!-- Добавьте дополнительные карточки книг здесь -->
 

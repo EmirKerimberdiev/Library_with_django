@@ -21,9 +21,12 @@
     <div class="comment-section">
         <h5>Комментарии</h5>
         {% for i in book_id.reviews_books.all %}
+        {% load cache %}
+        {% cache 600 books_list %}
         <div class="comment">
             <p> {{ i.created_at }}: {{  i.description }} <strong>Оценка:</strong> {{ i.mark }}</p>
         </div>
+        {% endcache %}
         {% endfor %}
     </div>
 </div>

@@ -4,7 +4,7 @@ from . import models
 
 def all_hashtags(request):
     if request.method == 'GET':
-        hashtags_list = models.Hashtag.objects.filter().order_by('-id')
+        hashtags_list = models.Hashtag.objects.select_related().order_by('-id')
         context = {'hashtags_list': hashtags_list}
         return render(request, 'all_hashtags.html', context=context)
 

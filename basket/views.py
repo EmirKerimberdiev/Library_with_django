@@ -4,6 +4,8 @@ from . import models, forms
 from django.views import generic
 
 
+
+
 # READ with class
 class OrderListView(generic.ListView):
     template_name = 'order/order_list.html'
