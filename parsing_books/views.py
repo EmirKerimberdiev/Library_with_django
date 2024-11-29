@@ -2,6 +2,7 @@ from django.views import generic
 from . import models, forms
 from django.http import HttpResponse
 
+
 class BookListView(generic.ListView):
     template_name = 'books/books_list.html'
     context_object_name = 'books'

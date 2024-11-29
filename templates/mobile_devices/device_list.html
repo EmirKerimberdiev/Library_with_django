@@ -1,0 +1,83 @@
+{% load static %}
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+            height: auto;
+        }
+        .card p {
+            margin: 10px 0;
+        }
+        .card strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .empty-message {
+            text-align: center;
+            font-size: 18px;
+            color: #777;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for device in device_list %}
+            <div class="card">
+                <p><strong>Title:</strong> {{ device.name }}</p>
+                <p><strong>Company:</strong> {{ device.company }}</p>
+                <p><strong>Date of Purchase:</strong> {{ device.date_of_purchase }}</p>
+                <p><strong>Price:</strong> ${{ device.price }}</p>
+                {% if device.image %}
+                    <img src="{{ device.image.url }}" alt="{{ device.name }}">
+                {% else %}
+                    <p>No image available</p>
+                {% endif %}
+                <p><strong>Tags:</strong>
+                    {% for tag in device.tags.all %}
+                        <span class="badge bg-primary">{{ tag.name }}</span>
+                    {% empty %}
+                        <span>No tags available</span>
+                    {% endfor %}
+                </p>
+                <a href="{% url 'devices_detail' device.id %}" class="btn btn-primary">View Details</a> <!-- Изменена ссылка на правильный путь -->
+            </div>
+        {% empty %}
+            <p class="empty-message">No devices available.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+{% include 'footer.html' %}

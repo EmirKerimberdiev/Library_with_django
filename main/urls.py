@@ -14,6 +14,7 @@ urlpatterns = [
     path('', include('basket.urls')),
     path('', include('parsing_books.urls')),
     path('', include('users.urls')),
+    path('', include('mobile_devices.urls')),
 
 ]
 urlpatterns += static(settings.MEDIA_URL,

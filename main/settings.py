@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 if os.environ.get('DEBUG') == 'on':
     DEBUG = True
 else:
-    DEBUG = False
+    DEBUG = True
 
 
 ALLOWED_HOSTS = ["*"]
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'parsing_books',
     'users',
     'debug_toolbar',
-    'django_extensions'
+    'django_extensions',
+    'mobile_devices'
 ]
 
 MIDDLEWARE = [
