@@ -1,30 +1,38 @@
 from django.shortcuts import render
 from . import models
+from django.views import generic
 
 
-def all_hashtags(request):
-    if request.method == 'GET':
-        hashtags_list = models.Hashtag.objects.select_related().order_by('-id')
-        context = {'hashtags_list': hashtags_list}
-        return render(request, 'all_hashtags.html', context=context)
 
+class AllHashtagListView(generic.ListView):
+    template_name = 'all_hashtags.html'
+    context_object_name = 'hashtags_list'
+    model = models.Hashtag
 
-def grand_list_view(request):
-    if request.method == 'GET':
-        grand = models.Hashtag.objects.filter(tags__name='Для стариков').order_by('-id')
-        context = {'grand': grand}
-        return render(request, 'grand.html', context=context)
+    def get_queryset(self):
+        return self.model.objects.filter().order_by('-id')
 
+class GrandHashtagListView(generic.ListView):
+    template_name = 'grand.html'
+    context_object_name = 'grand'
+    model = models.Hashtag
 
-def young_list_view(request):
-    if request.method == 'GET':
-        young = models.Hashtag.objects.filter(tags__name='Для молодых').order_by('-id')
-        context = {'young': young}
-        return render(request, 'young.html', context=context)
+    def get_queryset(self):
+        return self.model.objects.filter(tags__name='Для стариков').order_by('-id')
 
+class YoungHashtagListView(generic.ListView):
+    template_name = 'young.html'
+    context_object_name = 'young'
+    model = models.Hashtag
 
-def children_list_view(request):
-    if request.method == 'GET':
-        children = models.Hashtag.objects.filter(tags__name='Для детей').order_by('-id')
-        context = {'children': children}
-        return render(request, 'children.html', context=context)
+    def get_queryset(self):
+        return self.model.objects.filter(tags__name='Для молодых').order_by('-id')
+
+class ChildrenHashtagListView(generic.ListView):
+    template_name = 'children.html'
+    context_object_name = 'children'
+    model = models.Hashtag
+
+    def get_queryset(self):
+        return self.model.objects.filter(tags__name='Для детей').order_by('-id')
+
